@@ -1,9 +1,9 @@
-# frozen_string_literal: true
+# frozen_string_literal: true 
 
 class SessionsController < Devise::SessionsController
   skip_before_action :verify_signed_out_user
   respond_to :json
-  # POST /api/login
+  ## POST /api/login
   def create
     unless request.format == :json
       sign_out

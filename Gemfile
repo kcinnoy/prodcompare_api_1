@@ -8,7 +8,9 @@ gem 'rails', '~> 6.0.0'
 
 # authentication for users
 gem 'devise'
+gem 'devise_token_auth'
 gem 'devise-jwt', '~> 0.5.9'
+
 
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
