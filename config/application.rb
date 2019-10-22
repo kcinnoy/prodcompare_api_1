@@ -24,10 +24,11 @@ module ProdcompareApi
     config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
       allow do
         origins 'http://localhost:3001'
-        resource '*', headers: :any,
-                 methods: [:get, :post, :patch, :options, :delete],
-                 credentials: true,
-                 expose: %w(Access-Token Uid Authorization)
+        resource '*', 
+                headers: :any,
+                methods: [:get, :post, :patch, :options, :delete],
+                credentials: true,
+                expose: %w(Access-Token Uid Authorization)
       end
     end
     # Initialize configuration defaults for originally generated Rails version.
