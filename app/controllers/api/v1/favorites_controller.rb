@@ -2,8 +2,8 @@ class Api::V1::FavoritesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # Rails.logger.debug(current_user.as_json)
-    @favorites = paginate current_user.favorites
+    Rails.logger.debug(current_user.as_json)
+    @favorites =  current_user.favorites
 
     render json: {result: @favorites}
   end
