@@ -29,7 +29,7 @@ class SessionsController < Devise::SessionsController
       }
     end
   end
-  # DELETE /api/logout.json
+  # DELETE /api/logout.jsonn
   def destroy
     super and return if params['Authorization'].blank?
     user = ApiUser.find_by_jti(decode_token)
