@@ -23,7 +23,7 @@ module ProdcompareApi
   class Application < Rails::Application
     config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
       allow do
-        origins 'http://localhost:3001'
+        origins 'http://localhost:3000'
         resource '*', 
                 headers: :any,
                 methods: [:get, :post, :patch, :options, :delete],
